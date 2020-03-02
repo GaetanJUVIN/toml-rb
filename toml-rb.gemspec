@@ -3,6 +3,7 @@ Gem::Specification.new do |s|
   s.version     = '2.1.0'
   s.date        = Time.now.strftime('%Y-%m-%d')
   s.summary     = 'Toml parser in ruby, for ruby.'
+  s.authors     = ["Authors cannot be empty"]
   s.description = 'A Toml parser using Citrus parsing library. '
   s.homepage    = 'https://github.com/gaetanjuvin/toml-rb'
   s.license     = 'MIT'
