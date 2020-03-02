@@ -27,7 +27,7 @@ module TomlRB
     def self.transform_escaped_chars(str)
       str.gsub(/\\(u[\da-fA-F]{4}|U[\da-fA-F]{8}|.)/) do |m|
         if m.size == 2
-          SPECIAL_CHARS[m] || parse_error(m)
+          SPECIAL_CHARS[m] #|| parse_error(m)
         else
           decode_unicode(m).force_encoding('UTF-8')
         end

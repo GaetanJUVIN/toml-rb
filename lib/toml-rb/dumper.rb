@@ -13,7 +13,7 @@ module TomlRB
     private
 
     def visit(hash, prefix, extra_brackets = false)
-      simple_pairs, nested_pairs, table_array_pairs = sort_pairs hash
+      simple_pairs, nested_pairs, table_array_pairs = get_pairs hash
 
       if prefix.any? && (simple_pairs.any? || hash.empty?)
         print_prefix prefix, extra_brackets
@@ -22,12 +22,12 @@ module TomlRB
       dump_pairs simple_pairs, nested_pairs, table_array_pairs, prefix
     end
 
-    def sort_pairs(hash)
+    def get_pairs(hash)
       nested_pairs = []
       simple_pairs = []
       table_array_pairs = []
 
-      hash.keys.sort.each do |key|
+      hash.keys.each do |key|
         val = hash[key]
         element = [key, val]
 
@@ -72,7 +72,7 @@ module TomlRB
 
         val.each do |child|
           print_prefix aux_prefix, true
-          args = sort_pairs(child) << aux_prefix
+          args = get_pairs(child) << aux_prefix
 
           dump_pairs(*args)
         end

@@ -2,7 +2,7 @@ grammar TomlRB::Primitive
   include TomlRB::Helper
 
   rule primitive
-    datetime | bool | number | string
+    datetime | bool | number | string | nil
   end
 
   ##
@@ -135,6 +135,10 @@ grammar TomlRB::Primitive
   ##
   # Boolean rules
   ##
+  
+  rule nil
+    'nil' { nil }
+  end
 
   rule bool
     true | false

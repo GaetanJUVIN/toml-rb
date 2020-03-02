@@ -1,10 +1,7 @@
-toml-rb
-=======
+Custom version of TOML (and very ruby centric)
+Highly inspired by toml-rb (https://github.com/emancu/toml-rb)
 
-[![Gem Version](https://badge.fury.io/rb/toml-rb.svg)](http://badge.fury.io/rb/toml-rb)
-[![Build Status](https://travis-ci.org/emancu/toml-rb.svg)](https://travis-ci.org/emancu/toml-rb)
-[![Code Climate](https://codeclimate.com/github/emancu/toml-rb/badges/gpa.svg)](https://codeclimate.com/github/emancu/toml-rb)
-[![RubyGem](https://img.shields.io/gem/dt/toml-rb.svg)](https://rubygems.org/gems/toml-rb)
+=======
 
 A [TOML](https://github.com/toml-lang/toml) parser using [Citrus](http://mjackson.github.io/citrus) library.
 
@@ -64,16 +61,6 @@ hash = {
 TomlRB.dump(hash)
 # => "title = \"wow!\"\n[awesome]\nothers = false\nyou = true\n"
 ```
-
-Contributing
-------------
-
-1. Fork it
-2. Create your feature branch `git checkout -b my-new-feature`
-3. Add tests and commit your changes `git commit -am 'Add some feature'`
-4. Run tests `$ rake`
-5. Push the branch `git push origin my-new-feature`
-6. Create new Pull Request
 
 License
 -------
